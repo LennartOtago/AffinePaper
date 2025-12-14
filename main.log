@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.18)  11 DEC 2025 15:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.18)  13 DEC 2025 09:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1171,7 +1171,7 @@ Package pdftex.def Info: AffinePapData.png  used on input line 492.
 [13
 
 ]
-Overfull \hbox (11.66924pt too wide) detected at line 554
+Overfull \hbox (11.66924pt too wide) detected at line 563
 []
  []
 
@@ -1181,31 +1181,33 @@ Overfull \hbox (11.66924pt too wide) detected at line 554
 <AffinePapfandg.png, id=157, 315.579pt x 315.579pt>
 File: AffinePapfandg.png Graphic file (type png)
 <use AffinePapfandg.png>
-Package pdftex.def Info: AffinePapfandg.png  used on input line 597.
+Package pdftex.def Info: AffinePapfandg.png  used on input line 606.
 (pdftex.def)             Requested size: 315.57822pt x 315.57822pt.
 <AffinePapFirstMarg.png, id=158, 315.579pt x 315.579pt>
 File: AffinePapFirstMarg.png Graphic file (type png)
 <use AffinePapFirstMarg.png>
-Package pdftex.def Info: AffinePapFirstMarg.png  used on input line 603.
+Package pdftex.def Info: AffinePapFirstMarg.png  used on input line 612.
 (pdftex.def)             Requested size: 315.57822pt x 315.57822pt.
 <AffinePapOzonSampl.png, id=159, 315.579pt x 315.579pt>
 File: AffinePapOzonSampl.png Graphic file (type png)
 <use AffinePapOzonSampl.png>
-Package pdftex.def Info: AffinePapOzonSampl.png  used on input line 609.
+Package pdftex.def Info: AffinePapOzonSampl.png  used on input line 618.
 (pdftex.def)             Requested size: 315.57822pt x 315.57822pt.
 
 
-[15 <./AffinePapfandg.png>]
+[15]
 
-[16 <./AffinePapFirstMarg.png>]
+[16 <./AffinePapfandg.png>]
 
-[17 <./AffinePapOzonSampl.png>]
-Overfull \hbox (18.37971pt too wide) in paragraph at lines 649--650
+[17 <./AffinePapFirstMarg.png>]
+
+[18 <./AffinePapOzonSampl.png>]
+Overfull \hbox (18.37971pt too wide) in paragraph at lines 658--659
  [][] 
  []
 
 
-Overfull \hbox (10.55429pt too wide) in paragraph at lines 656--658
+Overfull \hbox (10.55429pt too wide) in paragraph at lines 665--667
 \OT1/cmr/m/n/10 pres-sure and tem-per-a-ture. More specif-i-cally $\OML/cmm/m/i
 t/10 m \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1$ sam-ples $\OML/cmm/b/it/10 x[] \
 OMS/cmsy/m/n/10 ^^X \OML/cmm/m/it/10 ^^Y[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^A
@@ -1213,52 +1215,52 @@ j\OML/cmm/m/it/10 ^^N[]; ^^M[]; \OML/cmm/b/it/10 y\OT1/cmr/m/n/10 )$,
  []
 
 
-Overfull \hbox (43.95416pt too wide) detected at line 681
+Overfull \hbox (43.95416pt too wide) detected at line 690
 []
  []
 
 
 
-[18
+[19
 
 ]
-<AffinePapAssMap.png, id=175, 315.579pt x 315.579pt>
+<AffinePapAssMap.png, id=179, 315.579pt x 315.579pt>
 File: AffinePapAssMap.png Graphic file (type png)
 <use AffinePapAssMap.png>
-Package pdftex.def Info: AffinePapAssMap.png  used on input line 710.
+Package pdftex.def Info: AffinePapAssMap.png  used on input line 719.
 (pdftex.def)             Requested size: 315.57822pt x 315.57822pt.
 
 
-[19]
+[20]
 
-[20 <./AffinePapAssMap.png>]
-<AffinePapMargFinal.png, id=186, 315.0972pt x 315.0972pt>
+[21 <./AffinePapAssMap.png>]
+<AffinePapMargFinal.png, id=189, 315.0972pt x 315.0972pt>
 File: AffinePapMargFinal.png Graphic file (type png)
 <use AffinePapMargFinal.png>
-Package pdftex.def Info: AffinePapMargFinal.png  used on input line 733.
+Package pdftex.def Info: AffinePapMargFinal.png  used on input line 742.
 (pdftex.def)             Requested size: 315.09642pt x 315.09642pt.
 
 
-[21
+[22
 
  <./AffinePapMargFinal.png>]
-<AffinePapCV.png, id=191, 315.579pt x 157.7895pt>
+<AffinePapCV.png, id=195, 315.0972pt x 157.5486pt>
 File: AffinePapCV.png Graphic file (type png)
 <use AffinePapCV.png>
-Package pdftex.def Info: AffinePapCV.png  used on input line 759.
-(pdftex.def)             Requested size: 315.57822pt x 157.78911pt.
-<AffinePapOzoFinal.png, id=192, 315.579pt x 315.579pt>
+Package pdftex.def Info: AffinePapCV.png  used on input line 767.
+(pdftex.def)             Requested size: 315.09642pt x 157.5482pt.
+<AffinePapOzoFinal.png, id=196, 315.0972pt x 315.0972pt>
 File: AffinePapOzoFinal.png Graphic file (type png)
 <use AffinePapOzoFinal.png>
-Package pdftex.def Info: AffinePapOzoFinal.png  used on input line 770.
-(pdftex.def)             Requested size: 315.57822pt x 315.57822pt.
+Package pdftex.def Info: AffinePapOzoFinal.png  used on input line 779.
+(pdftex.def)             Requested size: 315.09642pt x 315.09642pt.
 
 
-[22 <./AffinePapCV.png>]
+[23 <./AffinePapCV.png>]
 
-[23 <./AffinePapOzoFinal.png>]
+[24 <./AffinePapOzoFinal.png>]
 
-[24
+[25
 
 ]
 
@@ -1267,24 +1269,26 @@ Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Using 'family-given' now.
 
 
-Overfull \hbox (7.88931pt too wide) in paragraph at lines 787--787
+Overfull \hbox (7.88931pt too wide) in paragraph at lines 796--796
 \OT1/cmr/m/n/10 prob-lem''. In: \OT1/cmr/m/it/10 SIAM/ASA Jour-nal on Un-cer-ta
 inty Quan-tifi-ca-tion \OT1/cmr/m/n/10 4.1 (2016),
  []
 
 
-Overfull \hbox (4.447pt too wide) in paragraph at lines 787--787
+Overfull \hbox (4.447pt too wide) in paragraph at lines 796--796
 \OT1/cmr/m/n/10 In: \OT1/cmr/m/it/10 Jour-nal of Quan-ti-ta-tive Spec-troscopy 
 and Ra-dia-tive Trans-fer \OT1/cmr/m/n/10 277.107949
  []
 
 
 
-[25
+[26
 
 ]
 
-[26] (./main.aux)
+[27]
+
+[28] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1294,10 +1298,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25871 strings out of 473190
- 528433 string characters out of 5715800
- 1279827 words of memory out of 5000000
- 48711 multiletter control sequences out of 15000+600000
+ 25885 strings out of 473190
+ 528994 string characters out of 5715800
+ 1280044 words of memory out of 5000000
+ 48725 multiletter control sequences out of 15000+600000
  572460 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,20n,90p,1885b,1328s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1323,10 +1327,10 @@ ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texli
 ve/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loc
 al/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (26 pages, 1114937 bytes).
+Output written on main.pdf (28 pages, 1120124 bytes).
 PDF statistics:
- 305 PDF objects out of 1000 (max. 8388607)
- 187 compressed objects within 2 object streams
+ 311 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  118 words of extra memory for PDF output out of 10000 (max. 10000000)
 

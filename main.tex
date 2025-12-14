@@ -490,7 +490,7 @@ Recall that $\bm{x} \in \mathbb{R}^n$ with $n = 34$ and $\bm{y} \in \mathbb{R}^m
 \begin{figure}[ht!]
 	\centering
     \includegraphics[]{AffinePapData.png}
-	\caption[]{}
+	\caption[]{Non-linear noise-free data and non-linear noisy data at different tangent heights.}
 	\label{fig:Data}
 \end{figure} 
 \clearpage
@@ -510,7 +510,7 @@ This immediately gives us  $g(\lambda) = 2 \sum \log \text{diag}(\bm{C})$.
 We calculate $\bm{x}_{\lambda} = (\bm{A}^T \bm{A} + \lambda \bm{L} )^{-1} \bm{A}^T \bm{y}$ via \texttt{scipy.linalg.cho\_solve} which then gives us $f(\lambda) = \bm{y}^T \bm{y} - (\bm{A}^T \bm{y})^T \bm{x}_{\lambda}$.
 Then for each $\lambda$ the cost to compute the marginal posterior $\pi( \lambda,\cdot | \bm{y})$ for varying $\gamma = [0.8\times 10^{15},1.2\times 10^{16}] $ is negligible.
 
-Further, at no additional computational cost the posterior mean in Eq. \ref{eq:MeanInt} is obtained by weighted expatiation over the predefined grid with $\pi(\lambda| \bm{y}) = \int \pi(\lambda, \gamma| \bm{y}) \diff \gamma $.
+Further, at no additional computational cost the posterior mean in Eq.~\ref{eq:MeanInt} is obtained by weighted expatiation over the predefined grid with $\pi(\lambda| \bm{y}) = \int \pi(\lambda, \gamma| \bm{y}) \diff \gamma $.
 We normalise numerically over the grid so that $\sum \pi(\lambda_i| \bm{y}) = 1$.
 
 \subsubsection{Sampling from Marginal posterior}
@@ -540,8 +540,17 @@ is calculated and an independent sample is given as:
 Note, that alternatively on could draw an independent sample using Eq.~\ref{eq:GibbsStep}, which is a Gamma distribution due to the choice of prior.
 The here presented IRT method works for arbitrary priors.
 
-This takes roughly $\approx 0.1$s on a MacBook Pro from 2019 with a 2.4 GHz quad-core Intel i5 processor.
-\textcolor{red}{Integrated Autocorrelation Time -- MH-correction step??}
+We define the Integrated Autocorrelation Times (IACT) as in \cite{fox2016fast} so that
+\begin{align}
+	\tau_{\text{int}}  \coloneqq  \Bigg(  1 + 2 \sum_{t = 1}^{W} \frac{\Gamma(t)}{\Gamma(0)}  \Bigg)  
+\end{align} 
+with autocorrelation coefficient $\Gamma(t)$.
+This is twice the value of the IACT in~\cite[pp. 103-105]{wolff2002LecNot} and~\cite{wolff2004monte,drikHesse}, as commonly defined within the physics community.
+U. Wolff~\cite{wolff2004monte} (and the Python implementation by D. Hesse~\cite{drikHesse}) provide a way to not only calculate the IACT safely but also to quantify the errors of the estimated IACT.
+The IATCs are $\tau_{\text{int},\lambda} = 1.05\pm-0.042$ and $\tau_{\text{int},\gamma} =0.985\pm0.034 $ based on a chain with 10000 samples.
+So every second sample via the IRT scheme presents an independent marginal posteiror sample.
+Conditioned on an independent sample from the marginal posterior, one can draw an independent sample from the full conditional posterior.
+\textcolor{red}{MH-correction step??}
 
 \subsection{Full Conditional Posterior}
 \label{subsec:FullCondPost}
@@ -588,26 +597,26 @@ More explicitly, conditioned on an independent $\lambda^{(k)},\gamma^{(k)} \sim 
 with $\tilde{\bm{v}}_1 \sim \mathcal{N}(\bm{0},  \bm{I})$, $\tilde{\bm{v}}_2 \sim \mathcal{N}(\bm{0}, \bm{I} )$ and $\bm{L}^{1/2}$ is the Cholesky decomposition of $\bm{L}$ \cite{bardsley2012mcmc}.
 Note that $\bm{v}_1 \in \mathbb{R}^m$ and $\bm{v}_2 \in \mathbb{R}^n$.
 The Cholesky factorisation of $\bm{B}^{(k)}$ and $\bm{L}$ is obtained via the Python function \texttt{numpy.linalg.cholesky} and \texttt{scipy.linalg.cho\_solve} is used to solve for $\bm{x}^{(k)}$.
-We draw $n-1 = 33$ samples to find an affine approximation to the non-linear forward model in $\approx 0.1$s on a MacBook Pro from 2019 with a 2.4 GHz quad-core Intel i5 processor.
+We draw $n-1 = 29$ samples to find an affine approximation to the non-linear forward model in $\approx 0.003$s on a MacBook Pro from 2019 with a 2.4 GHz quad-core Intel i5 processor.
 The full conditional posterior samples are plotted in Fig.~\ref{fig:OzonSampl} with negative ozone values set to zero.
 The fact that we have to deal with negative ozone values is due to the poor prior choice in $\pi(\bm{x}|\delta)$.
 
 \begin{figure}[ht!]
 	\centering
     \includegraphics[]{AffinePapfandg.png}
-	\caption[]{}
+	\caption[]{Functions $f(\lambda)$ and $g(\lambda)$ for $\lambda = [10^{-5},8 \times 10^{-4}] $, grid points are marked red.}
 	\label{fig:fandg}
 \end{figure} 
 \begin{figure}[ht!]
 	\centering
     \includegraphics[]{AffinePapFirstMarg.png}
-	\caption[]{}
+	\caption[]{Marginal posterior for linear forward model on a $20 \times 20$ grid.}
 	\label{fig:FirstMar}
 \end{figure}
 \begin{figure}[ht!]
 	\centering
     \includegraphics[]{AffinePapOzonSampl.png}
-	\caption[]{}
+	\caption[]{29 Ozone samples via RTO method and posterior ozone mean via quadrature (see Eq.~\ref{eq:MeanInt}).}
 	\label{fig:OzonSampl}
 \end{figure}
 \clearpage
@@ -718,7 +727,7 @@ Here $\text{vec}(\bm{V})$ vectorises the matrix $\bm{V}$.
 Fig.~\ref{fig:AssMap} shows the mapping for one posterior ozone sample with a relative RMS error~$\approx0.01\%$.
 This posterior ozone sample has not been used to create this mapping; in other words, this is an unseen event not occurring in the training data.
 Consequently, from here onwards the approximated forward map is used.
-This takes roughly $\approx 0.1$s on a MacBook Pro from 2019 with a 2.4 GHz quad-core Intel i5 processor.
+This takes $\approx 0.1$s on a MacBook Pro from 2019 with a 2.4 GHz quad-core Intel i5 processor.
 
 \clearpage
 \subsection{Posterior ozone}
@@ -731,17 +740,16 @@ We use the exact same grid and setup as in Sec.~\ref{sec:firstMarg} to define th
 \begin{figure}[ht!]
 	\centering
     \includegraphics[]{AffinePapMargFinal.png}
-	\caption[]{}
+	\caption[]{Marginal posterior for approximated forward model on a $20 \times 20$ grid.}
 	\label{fig:MargFinal}
 \end{figure}
 As already mentioned, that gives us the posterior mean via weighted expectation for free.
-This takes roughly $\approx 0.1$s on a MacBook Pro from 2019 with a 2.4 GHz quad-core Intel i5 processor.
-
+The IATCs are $\tau_{\text{int},\lambda} = 0.968 \pm0.034$ and $\tau_{\text{int},\gamma} =0.954\pm0.033$ based on a chain with 10000 samples.
 
 Samples from the conditional posterior are drawn via the RTO method.
 To estimate the number of samples $N$ needed for a good enough estimate of the STD we calculate the average Coefficient of Variation ($\overline{\text{CV}}$),
 \begin{align}
-   \overline{\text{CV}} =  \left\lVert \frac{1}{n} \frac{\sqrt{ \text{var}_N(\bm{\mu}_{\bm{x}|\bm{y}})}}{\bm{\mu}_{\bm{x}|\bm{y}} }\right\rVert_1 ,
+   \overline{\text{CV}} =  \left\lVert \frac{1}{n} \frac{\sqrt{ \text{var}_N(\bm{\mu}_{\bm{x}|\bm{y}})}}{\bm{\mu}_{\bm{x}|\bm{y}} }\right\rVert_1 , \label{eq:avrgCV}
 \end{align}
 recall that  $\bm{\mu}_{\bm{x}|\bm{y}} \in \mathbb{R}^n$ with $n = 34$.
 The $\overline{\text{CV}}$ gives a measure of how much the STD varies compared to the mean.
@@ -757,18 +765,19 @@ The $\overline{\text{CV}}$ is calculated for each number of samples ranging from
 \begin{figure}[ht!]
 	\centering
     \includegraphics[]{AffinePapCV.png}
-	\caption[]{}
+	\caption[]{Average Coefficient of Variation in $\%$ as calculated in Eq.~\ref{eq:avrgCV}.}
 	\label{fig:Err}
 \end{figure}
 In Fig.~\ref{fig:Err} we observe that the $\overline{\text{CV}}$ is rather large indicating that the STD is large compared to the posterior mean.
-Further we conclude 20 full conditional posterior ozone samples are enough for a sufficient estimate of the STD.
+Further, we conclude 50 full conditional posterior ozone samples are enough for a sufficient estimate of the STD.
+Approximating the marginal posterior on a $20 \times 20$ grid and taking 50 independent full posterior samples of ozone takes $\approx 0.008$s on a MacBook Pro from 2019 with a 2.4 GHz quad-core Intel i5 processor.
 The sample-based STD with the posterior mean (via weighted expectation) is plotted in Fig.~\ref{fig:OzoFinal}.
 Note that the posterior ozone profile does not capture the second ozone peak at around $80$km.
 
 \begin{figure}[ht!]
 	\centering
     \includegraphics[]{AffinePapOzoFinal.png}
-	\caption[]{}
+	\caption[]{Posterior ozone mean via quadrature (see Eq.~\ref{eq:MeanInt}) and STD based on 20 samples via the RTO method.}
 	\label{fig:OzoFinal}
 \end{figure}
 
@@ -777,9 +786,9 @@ Note that the posterior ozone profile does not capture the second ozone peak at 
 \clearpage
 \section{Conclusion}
 \begin{itemize}
-    \item
-    \item 
-    \item
+    \item $20$ solves of $x_{\lambda}$ for marginal posteirior and full posterior mean (see Eq.~\ref{eq:CondPost} and Eq.~\ref{eq:MeanInt})
+	\item $29$ samples of full conditional are enough  for finding an affine map, this includes $29$ solves of ``randomised'' $x_{\lambda}$ via the RTO method (see Eq.~\ref{eq:RTOAppl})
+	\item $50$ samples of full conditional are enough for the STD estimate of posterior ozone, this includes $50$ solves of ``randomised'' $x_{\lambda}$ via the RTO method (see Eq.~\ref{eq:RTOAppl})
 \end{itemize}
 \clearpage
 % {\renewcommand*\MakeUppercase[1]{#1}%
