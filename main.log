@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.18)  13 DEC 2025 09:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.6.18)  23 DEC 2025 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -879,7 +879,11 @@ Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 \@quotelevel=\count447
 \@quotereset=\count448
 
-(./main.aux)
+(./main.aux
+
+LaTeX Warning: Label `eq:avrgCV' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -896,8 +900,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
-
-(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count449
 \scratchdimen=\dimen306
@@ -950,7 +953,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (7.32129pt too wide) in paragraph at lines 51--51
+Overfull \hbox (7.32129pt too wide) in paragraph at lines 52--52
 []\OT1/cmr/bx/n/14.4 Linear in-verse Prob-lem -- Hi-er-ar-chi-cal Bayesian
  []
 
@@ -962,73 +965,73 @@ Overfull \hbox (7.32129pt too wide) in paragraph at lines 51--51
 al/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 [2] (./LIMB.pdf_tex
-<LIMB.pdf, id=25, page=1, 422.57875pt x 127.47626pt>
+<LIMB.pdf, id=24, page=1, 422.57875pt x 127.47626pt>
 File: LIMB.pdf Graphic file (type pdf)
 <use LIMB.pdf, page 1>
 Package pdftex.def Info: LIMB.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 422.57874pt x 127.47981pt.
-<LIMB.pdf, id=26, page=2, 422.57875pt x 127.47626pt>
+<LIMB.pdf, id=25, page=2, 422.57875pt x 127.47626pt>
 File: LIMB.pdf Graphic file (type pdf)
 <use LIMB.pdf, page 2>
 Package pdftex.def Info: LIMB.pdf , page2 used on input line 58.
 (pdftex.def)             Requested size: 422.57874pt x 127.47981pt.
-<LIMB.pdf, id=27, page=3, 422.57875pt x 127.47626pt>
+<LIMB.pdf, id=26, page=3, 422.57875pt x 127.47626pt>
 File: LIMB.pdf Graphic file (type pdf)
 <use LIMB.pdf, page 3>
 Package pdftex.def Info: LIMB.pdf , page3 used on input line 62.
 (pdftex.def)             Requested size: 422.57874pt x 127.47981pt.
-<LIMB.pdf, id=28, page=4, 422.57875pt x 127.47626pt>
+<LIMB.pdf, id=27, page=4, 422.57875pt x 127.47626pt>
 File: LIMB.pdf Graphic file (type pdf)
 <use LIMB.pdf, page 4>
 Package pdftex.def Info: LIMB.pdf , page4 used on input line 67.
 (pdftex.def)             Requested size: 422.57874pt x 127.47981pt.
-<LIMB.pdf, id=29, page=5, 422.57875pt x 127.47626pt>
+<LIMB.pdf, id=28, page=5, 422.57875pt x 127.47626pt>
 File: LIMB.pdf Graphic file (type pdf)
 <use LIMB.pdf, page 5>
 Package pdftex.def Info: LIMB.pdf , page5 used on input line 69.
 (pdftex.def)             Requested size: 422.57874pt x 127.47981pt.
-<LIMB.pdf, id=30, page=6, 422.57875pt x 127.47626pt>
+<LIMB.pdf, id=29, page=6, 422.57875pt x 127.47626pt>
 File: LIMB.pdf Graphic file (type pdf)
 <use LIMB.pdf, page 6>
 Package pdftex.def Info: LIMB.pdf , page6 used on input line 71.
 (pdftex.def)             Requested size: 422.57874pt x 127.47981pt.
-<LIMB.pdf, id=31, page=7, 422.57875pt x 127.47626pt>
+<LIMB.pdf, id=30, page=7, 422.57875pt x 127.47626pt>
 File: LIMB.pdf Graphic file (type pdf)
 <use LIMB.pdf, page 7>
 Package pdftex.def Info: LIMB.pdf , page7 used on input line 73.
 (pdftex.def)             Requested size: 422.57874pt x 127.47981pt.
-<LIMB.pdf, id=32, page=8, 422.57875pt x 127.47626pt>
+<LIMB.pdf, id=31, page=8, 422.57875pt x 127.47626pt>
 File: LIMB.pdf Graphic file (type pdf)
 <use LIMB.pdf, page 8>
 Package pdftex.def Info: LIMB.pdf , page8 used on input line 75.
 (pdftex.def)             Requested size: 422.57874pt x 127.47981pt.
-<LIMB.pdf, id=33, page=9, 422.57875pt x 127.47626pt>
+<LIMB.pdf, id=32, page=9, 422.57875pt x 127.47626pt>
 File: LIMB.pdf Graphic file (type pdf)
 <use LIMB.pdf, page 9>
 Package pdftex.def Info: LIMB.pdf , page9 used on input line 77.
 (pdftex.def)             Requested size: 422.57874pt x 127.47981pt.
-<LIMB.pdf, id=34, page=10, 422.57875pt x 127.47626pt>
+<LIMB.pdf, id=33, page=10, 422.57875pt x 127.47626pt>
 File: LIMB.pdf Graphic file (type pdf)
 <use LIMB.pdf, page 10>
 Package pdftex.def Info: LIMB.pdf , page10 used on input line 79.
 (pdftex.def)             Requested size: 422.57874pt x 127.47981pt.
-<LIMB.pdf, id=35, page=11, 422.57875pt x 127.47626pt>
+<LIMB.pdf, id=34, page=11, 422.57875pt x 127.47626pt>
 File: LIMB.pdf Graphic file (type pdf)
 <use LIMB.pdf, page 11>
 Package pdftex.def Info: LIMB.pdf , page11 used on input line 81.
 (pdftex.def)             Requested size: 422.57874pt x 127.47981pt.
-<LIMB.pdf, id=36, page=12, 422.57875pt x 127.47626pt>
+<LIMB.pdf, id=35, page=12, 422.57875pt x 127.47626pt>
 File: LIMB.pdf Graphic file (type pdf)
 <use LIMB.pdf, page 12>
 Package pdftex.def Info: LIMB.pdf , page12 used on input line 83.
 (pdftex.def)             Requested size: 422.57874pt x 127.47981pt.
-<LIMB.pdf, id=37, page=13, 422.57875pt x 127.47626pt>
+<LIMB.pdf, id=36, page=13, 422.57875pt x 127.47626pt>
 File: LIMB.pdf Graphic file (type pdf)
 <use LIMB.pdf, page 13>
 Package pdftex.def Info: LIMB.pdf , page13 used on input line 85.
 (pdftex.def)             Requested size: 422.57874pt x 127.47981pt.
 )
-Overfull \hbox (77.57874pt too wide) in paragraph at lines 86--133
+Overfull \hbox (77.57874pt too wide) in paragraph at lines 86--134
  [][] 
  []
 
@@ -1089,7 +1092,7 @@ multiple pdfs with page group included in a single page
 [5]
 
 [6]
-Overfull \hbox (7.1432pt too wide) in paragraph at lines 263--267
+Overfull \hbox (7.1432pt too wide) in paragraph at lines 264--268
 \OT1/cmr/m/n/10 includes an ad-di-tive identically-distributed Gaus-sian noise 
 vec-tor $\OML/cmm/b/it/10 ^^Q \OMS/cmsy/m/n/10 ^^X N\OT1/cmr/m/n/10 (0\OML/cmm/
 m/it/10 ; ^^M[]\OML/cmm/b/it/10 I\OT1/cmr/m/n/10 )$.
@@ -1160,54 +1163,54 @@ t/10 ^^Y\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^M\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10
 <AffinePapData.png, id=140, 315.579pt x 315.579pt>
 File: AffinePapData.png Graphic file (type png)
 <use AffinePapData.png>
-Package pdftex.def Info: AffinePapData.png  used on input line 492.
+Package pdftex.def Info: AffinePapData.png  used on input line 491.
 (pdftex.def)             Requested size: 315.57822pt x 315.57822pt.
 
 
 [11]
 
 [12 <./AffinePapData.png>]
+<AffinePapFirstMarg.png, id=149, 315.579pt x 315.579pt>
+File: AffinePapFirstMarg.png Graphic file (type png)
+<use AffinePapFirstMarg.png>
+Package pdftex.def Info: AffinePapFirstMarg.png  used on input line 513.
+(pdftex.def)             Requested size: 315.57822pt x 315.57822pt.
+
 
 [13
 
-]
-Overfull \hbox (11.66924pt too wide) detected at line 563
+ <./AffinePapFirstMarg.png>]
+<AffinePapfandg.png, id=156, 315.579pt x 315.579pt>
+File: AffinePapfandg.png Graphic file (type png)
+<use AffinePapfandg.png>
+Package pdftex.def Info: AffinePapfandg.png  used on input line 551.
+(pdftex.def)             Requested size: 315.57822pt x 315.57822pt.
+
+
+[14]
+Overfull \hbox (7.28069pt too wide) detected at line 577
 []
  []
 
 
 
-[14]
-<AffinePapfandg.png, id=157, 315.579pt x 315.579pt>
-File: AffinePapfandg.png Graphic file (type png)
-<use AffinePapfandg.png>
-Package pdftex.def Info: AffinePapfandg.png  used on input line 606.
-(pdftex.def)             Requested size: 315.57822pt x 315.57822pt.
-<AffinePapFirstMarg.png, id=158, 315.579pt x 315.579pt>
-File: AffinePapFirstMarg.png Graphic file (type png)
-<use AffinePapFirstMarg.png>
-Package pdftex.def Info: AffinePapFirstMarg.png  used on input line 612.
-(pdftex.def)             Requested size: 315.57822pt x 315.57822pt.
-<AffinePapOzonSampl.png, id=159, 315.579pt x 315.579pt>
+[15 <./AffinePapfandg.png>]
+<AffinePapOzonSampl.png, id=164, 315.579pt x 315.579pt>
 File: AffinePapOzonSampl.png Graphic file (type png)
 <use AffinePapOzonSampl.png>
-Package pdftex.def Info: AffinePapOzonSampl.png  used on input line 618.
+Package pdftex.def Info: AffinePapOzonSampl.png  used on input line 622.
 (pdftex.def)             Requested size: 315.57822pt x 315.57822pt.
 
 
-[15]
+[16]
 
-[16 <./AffinePapfandg.png>]
-
-[17 <./AffinePapFirstMarg.png>]
-
-[18 <./AffinePapOzonSampl.png>]
-Overfull \hbox (18.37971pt too wide) in paragraph at lines 658--659
+[17 <./AffinePapOzonSampl.png>]
+Overfull \hbox (18.37971pt too wide) in paragraph at lines 662--663
  [][] 
  []
 
 
-Overfull \hbox (10.55429pt too wide) in paragraph at lines 665--667
+Overfull \hbox (10.55429pt too wide) in paragraph at lines 669--671
 \OT1/cmr/m/n/10 pres-sure and tem-per-a-ture. More specif-i-cally $\OML/cmm/m/i
 t/10 m \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1$ sam-ples $\OML/cmm/b/it/10 x[] \
 OMS/cmsy/m/n/10 ^^X \OML/cmm/m/it/10 ^^Y[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^A
@@ -1215,52 +1218,52 @@ j\OML/cmm/m/it/10 ^^N[]; ^^M[]; \OML/cmm/b/it/10 y\OT1/cmr/m/n/10 )$,
  []
 
 
-Overfull \hbox (43.95416pt too wide) detected at line 690
+Overfull \hbox (43.95416pt too wide) detected at line 694
 []
  []
 
 
 
-[19
+[18
 
 ]
-<AffinePapAssMap.png, id=179, 315.579pt x 315.579pt>
+<AffinePapAssMap.png, id=175, 315.579pt x 315.579pt>
 File: AffinePapAssMap.png Graphic file (type png)
 <use AffinePapAssMap.png>
-Package pdftex.def Info: AffinePapAssMap.png  used on input line 719.
+Package pdftex.def Info: AffinePapAssMap.png  used on input line 723.
 (pdftex.def)             Requested size: 315.57822pt x 315.57822pt.
 
 
-[20]
+[19]
 
-[21 <./AffinePapAssMap.png>]
-<AffinePapMargFinal.png, id=189, 315.0972pt x 315.0972pt>
+[20 <./AffinePapAssMap.png>]
+<AffinePapMargFinal.png, id=186, 315.0972pt x 315.0972pt>
 File: AffinePapMargFinal.png Graphic file (type png)
 <use AffinePapMargFinal.png>
-Package pdftex.def Info: AffinePapMargFinal.png  used on input line 742.
+Package pdftex.def Info: AffinePapMargFinal.png  used on input line 746.
 (pdftex.def)             Requested size: 315.09642pt x 315.09642pt.
 
 
-[22
+[21
 
  <./AffinePapMargFinal.png>]
-<AffinePapCV.png, id=195, 315.0972pt x 157.5486pt>
+<AffinePapCV.png, id=191, 315.0972pt x 157.5486pt>
 File: AffinePapCV.png Graphic file (type png)
 <use AffinePapCV.png>
-Package pdftex.def Info: AffinePapCV.png  used on input line 767.
+Package pdftex.def Info: AffinePapCV.png  used on input line 775.
 (pdftex.def)             Requested size: 315.09642pt x 157.5482pt.
-<AffinePapOzoFinal.png, id=196, 315.0972pt x 315.0972pt>
+<AffinePapOzoFinal.png, id=192, 315.0972pt x 315.0972pt>
 File: AffinePapOzoFinal.png Graphic file (type png)
 <use AffinePapOzoFinal.png>
-Package pdftex.def Info: AffinePapOzoFinal.png  used on input line 779.
+Package pdftex.def Info: AffinePapOzoFinal.png  used on input line 787.
 (pdftex.def)             Requested size: 315.09642pt x 315.09642pt.
 
 
-[23 <./AffinePapCV.png>]
+[22 <./AffinePapCV.png>]
 
-[24 <./AffinePapOzoFinal.png>]
+[23 <./AffinePapOzoFinal.png>]
 
-[25
+[24
 
 ]
 
@@ -1269,30 +1272,34 @@ Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Using 'family-given' now.
 
 
-Overfull \hbox (7.88931pt too wide) in paragraph at lines 796--796
+Overfull \hbox (7.88931pt too wide) in paragraph at lines 804--804
 \OT1/cmr/m/n/10 prob-lem''. In: \OT1/cmr/m/it/10 SIAM/ASA Jour-nal on Un-cer-ta
 inty Quan-tifi-ca-tion \OT1/cmr/m/n/10 4.1 (2016),
  []
 
 
-Overfull \hbox (4.447pt too wide) in paragraph at lines 796--796
+Overfull \hbox (4.447pt too wide) in paragraph at lines 804--804
 \OT1/cmr/m/n/10 In: \OT1/cmr/m/it/10 Jour-nal of Quan-ti-ta-tive Spec-troscopy 
 and Ra-dia-tive Trans-fer \OT1/cmr/m/n/10 277.107949
  []
 
 
 
-[26
+[25
 
 ]
 
-[27]
+[26]
 
-[28] (./main.aux)
+[27] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
@@ -1300,7 +1307,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  25885 strings out of 473190
  528994 string characters out of 5715800
- 1280044 words of memory out of 5000000
+ 1280102 words of memory out of 5000000
  48725 multiletter control sequences out of 15000+600000
  572460 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1327,10 +1334,10 @@ ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texli
 ve/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/t
 exlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loc
 al/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (28 pages, 1120124 bytes).
+Output written on main.pdf (27 pages, 1122415 bytes).
 PDF statistics:
- 311 PDF objects out of 1000 (max. 8388607)
- 191 compressed objects within 2 object streams
+ 308 PDF objects out of 1000 (max. 8388607)
+ 189 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
