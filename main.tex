@@ -29,7 +29,7 @@
 \DeclareNameAlias{default}{last-first}
 \addbibresource{bib.bib}
 
-\title{AffinePaper}
+\title{Efficient inference in a weakly non-linear Bayesian inverse Problem using an affine approximation}
 \author{Lennart Golks and Colin Fox}
 \date{November 2025}
 
@@ -81,15 +81,23 @@ Within a Bayesian approach all unknown hyper-parameters and parameters are treat
 \begin{figure}[ht!]
 	\centering
 	\begin{tikzpicture}
-		\node[roundnode2] at (0,2.5) (th)    {$\bm{\theta}$};
-		\node[roundnode2] at (0,0.5) (x)    {$\bm{x}$};
-		\node[align=center] at (0,-1.5) (u)    {$\{\bm{A}(\bm{x})\}$};
-		\node[rectnode] at (0,-3.5) (y)    {$\bm{y}$};
 		
-		\draw[->, very thick] (th.south) -- (x.north); 
+				
+		\node[roundnode2] at (0,2) (del)    {$\delta$};
+		\node[roundnode2] at (-1.5,2) (gam)    {$\gamma$};
+		\node[align=center] at (0,2) (theta) {$\bm{\theta}$};
+		\node[roundnode2] at (0,0.5) (x)    {$\bm{x}$};
+		\node[roundnode2] at (0,-1.5) (u)    {$\bm{A}(\bm{x})$};
+		\node[rectnode] at (0,-3) (y)    {$\bm{y}$};
+		
+		\node[align=center] at (-3.25,0) (nt) {noise\\$\bm{\eta} \sim$}
+		
+		\node[fit=(del)(gam),draw,thick,dotted,black, rounded corners] {};
+
 		\draw[->, very thick, mydotted] (x.south) -- (u.north); 
 		\draw[->, very thick] (u.south) -- (y.north); 
-		\draw[->, very thick] (th) edge[bend right=60] (y);  
+		\draw[->, very thick] (del.south) -- (x.north); 
+		\draw[->, very thick] (gam) edge[bend right=20] (y);  
 		
 		\node[align=center] at (2.8,2.5) (tht) {$\sim \pi_{\bm{\theta}}(\cdot) $ hyper-parameters};
 		\node[align=center] at (2.4,0.5) (xt) {$\sim \pi_{\bm{x}}(\cdot|\bm{\theta}) $ parameters};
@@ -129,7 +137,7 @@ Usually, the objective is to calculate the expectation of a function $h(\bm{x})$
 \begin{align}
 	\text{E}_{\bm{x},\bm{\theta}|\bm{y}} [h(\bm{x})] =  \int \int   h(\bm{x}) \,  \pi(\bm{x}, \bm{\theta} | \bm{y} ) \, \diff \bm{x}  \, \diff \bm{\theta}  \label{eq:expPos} \, .
 \end{align}
-\subsection{Marginal and then Conditional Method}
+\subsection{Marginal-then-Conditional Method}
 \label{subsec:TheoMTC}
 Characterising the posterior distribution or quickly generating a representative sample set from the posterior distribution often presents a significant challenge. 
 This is mainly due to the strong correlations that usually exist between the parameters $\bm{x}$ and hyper-parameters $\bm{\theta}$, as discussed by Rue and Held in~\cite{rue2005gaussian}.
