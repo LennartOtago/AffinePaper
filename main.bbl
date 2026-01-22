@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.2 $
+% $ biblatex bbl format version 3.3 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -16,8 +16,8 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}
-  \entry{bardsley2012mcmc}{article}{}
+\datalist[entry]{nty/global//global/global/global}
+  \entry{bardsley2012mcmc}{article}{}{}
     \name{author}{1}{}{%
       {{hash=BJ}{%
          family={Bardsley},
@@ -44,7 +44,7 @@
     \field{year}{2012}
   \endentry
 
-  \entry{bardsley2014randomize}{article}{}
+  \entry{bardsley2014randomize}{article}{}{}
     \name{author}{4}{}{%
       {{hash=BJ}{%
          family={Bardsley},
@@ -89,7 +89,7 @@
     \field{year}{2014}
   \endentry
 
-  \entry{BardsleyTC2019RTO}{inproceedings}{}
+  \entry{BardsleyTC2019RTO}{inproceedings}{}{}
     \name{author}{2}{}{%
       {{hash=BJ}{%
          family={Bardsley},
@@ -125,7 +125,7 @@
     \field{year}{2019}
   \endentry
 
-  \entry{Carlotti99}{article}{}
+  \entry{Carlotti99}{article}{}{}
     \name{author}{2}{}{%
       {{hash=CM}{%
          family={Carlotti},
@@ -159,7 +159,7 @@
     \field{year}{1999}
   \endentry
 
-  \entry{champ2022generalizedlawtotalcovariance}{article}{}
+  \entry{champ2022generalizedlawtotalcovariance}{article}{}{}
     \name{author}{2}{}{%
       {{hash=CCW}{%
          family={Champ},
@@ -185,7 +185,7 @@
     \field{year}{2022}
   \endentry
 
-  \entry{Dick_Kuo_Sloan_2013}{article}{}
+  \entry{Dick_Kuo_Sloan_2013}{article}{}{}
     \name{author}{3}{}{%
       {{hash=DJ}{%
          family={Dick},
@@ -219,7 +219,7 @@
     \field{year}{2013}
   \endentry
 
-  \entry{dolgov2020approximation}{article}{}
+  \entry{dolgov2020approximation}{article}{}{}
     \name{author}{4}{}{%
       {{hash=DS}{%
          family={Dolgov},
@@ -263,7 +263,7 @@
     \field{year}{2020}
   \endentry
 
-  \entry{fox2016fast}{article}{}
+  \entry{fox2016fast}{article}{}{}
     \name{author}{2}{}{%
       {{hash=FC}{%
          family={Fox},
@@ -295,7 +295,7 @@
     \field{year}{2016}
   \endentry
 
-  \entry{Froidevaux2008snrozone}{article}{}
+  \entry{Froidevaux2008snrozone}{article}{}{}
     \name{author}{36}{}{%
       {{hash=FL}{%
          family={Froidevaux},
@@ -529,7 +529,7 @@
     \field{year}{2008}
   \endentry
 
-  \entry{gordon2022hitran2020}{article}{}
+  \entry{gordon2022hitran2020}{article}{}{}
     \true{moreauthor}
     \true{morelabelname}
     \name{author}{10}{}{%
@@ -610,7 +610,7 @@
     \field{year}{2022}
   \endentry
 
-  \entry{drikHesse}{misc}{}
+  \entry{drikHesse}{misc}{}{}
     \name{author}{1}{}{%
       {{hash=HD}{%
          family={Hesse},
@@ -631,7 +631,7 @@
   a la Wolff.}
   \endentry
 
-  \entry{kaipio2005statinv}{book}{}
+  \entry{kaipio2005statinv}{book}{}{}
     \name{author}{2}{}{%
       {{hash=KJP}{%
          family={Kaipio},
@@ -662,7 +662,7 @@
     \field{year}{2005}
   \endentry
 
-  \entry{Lee2020NightOzone}{article}{}
+  \entry{Lee2020NightOzone}{article}{}{}
     \name{author}{2}{}{%
       {{hash=LJN}{%
          family={Lee},
@@ -693,7 +693,52 @@
     \field{year}{2020}
   \endentry
 
-  \entry{livesey2008ozonecarbonmono}{article}{}
+  \entry{livesey2006retrieval}{article}{}{}
+    \name{author}{4}{}{%
+      {{hash=LNJ}{%
+         family={Livesey},
+         familyi={L\bibinitperiod},
+         given={Nathaniel\bibnamedelima J},
+         giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=VSW}{%
+         family={Van\bibnamedelima Snyder},
+         familyi={V\bibinitperiod\bibinitdelim S\bibinitperiod},
+         given={W},
+         giveni={W},
+      }}%
+      {{hash=RWG}{%
+         family={Read},
+         familyi={R\bibinitperiod},
+         given={William\bibnamedelima G},
+         giveni={W\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=WPA}{%
+         family={Wagner},
+         familyi={W\bibinitperiod},
+         given={Paul\bibnamedelima A},
+         giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{LNJ+1}
+    \strng{fullhash}{LNJVSWRWGWPA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{number}{5}
+    \field{pages}{1144\bibrangedash 1155}
+    \field{title}{Retrieval algorithms for the {EOS} Microwave limb sounder
+  {(MLS)}}
+    \field{volume}{44}
+    \field{journaltitle}{IEEE Transactions on Geoscience and Remote Sensing}
+    \field{year}{2006}
+  \endentry
+
+  \entry{livesey2008ozonecarbonmono}{article}{}{}
     \name{author}{37}{}{%
       {{hash=LNJ}{%
          family={Livesey},
@@ -919,7 +964,7 @@
       }}%
     }
     \keyw{tropospheric composition, microwave, remote sounding}
-    \strng{namehash}{LNJ+1}
+    \strng{namehash}{LNJ+2}
   \strng{fullhash}{LNJFMJFLRWGLASMLJJHPHCWJWCRECDTDWHDBJFRAJRFJYBKBWLQBPVSSMJSWVSPCTRPWPAAMBEVCJPCLEDGSGRSJHJLMLJDNPOGBSGWWCR1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
@@ -933,7 +978,89 @@
     \field{year}{2008}
   \endentry
 
-  \entry{read2006forwardModel}{article}{}
+  \entry{raspollini2021level}{article}{}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{10}{}{%
+      {{hash=RP}{%
+         family={Raspollini},
+         familyi={R\bibinitperiod},
+         given={Piera},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=AE}{%
+         family={Arnone},
+         familyi={A\bibinitperiod},
+         given={Enrico},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=BF}{%
+         family={Barbara},
+         familyi={B\bibinitperiod},
+         given={Flavio},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Bianchini},
+         familyi={B\bibinitperiod},
+         given={Massimo},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CB}{%
+         family={Carli},
+         familyi={C\bibinitperiod},
+         given={Bruno},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=CS}{%
+         family={Ceccherini},
+         familyi={C\bibinitperiod},
+         given={Simone},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=CMP}{%
+         family={Chipperfield},
+         familyi={C\bibinitperiod},
+         given={Martyn\bibnamedelima P},
+         giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Dehn},
+         familyi={D\bibinitperiod},
+         given={Angelika},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=DFS}{%
+         family={Della\bibnamedelima Fera},
+         familyi={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+         given={Stefano},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=DBM}{%
+         family={Dinelli},
+         familyi={D\bibinitperiod},
+         given={Bianca\bibnamedelima Maria},
+         giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {G{\"o}ttingen, Germany}%
+    }
+    \strng{namehash}{RP+1}
+    \strng{fullhash}{RPAEBFBMCBCSCMPDADFSDBM+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{pages}{1\bibrangedash 46}
+    \field{title}{Level 2 processor and auxiliary data for {ESA} Version 8
+  final full mission analysis of {MIPAS} measurements on {ENVISAT}}
+    \field{volume}{2021}
+    \field{journaltitle}{Atmospheric Measurement Techniques Discussions}
+    \field{year}{2021}
+  \endentry
+
+  \entry{read2006forwardModel}{article}{}{}
     \name{author}{5}{}{%
       {{hash=RW}{%
          family={Read},
@@ -981,7 +1108,7 @@
     \field{year}{2006}
   \endentry
 
-  \entry{mipas2000handbook}{book}{}
+  \entry{mipas2000handbook}{book}{}{}
     \name{author}{1}{}{%
       {{hash=RC}{%
          family={Readings},
@@ -1007,7 +1134,38 @@
     \field{year}{2000}
   \endentry
 
-  \entry{Ridolfi00}{article}{}
+  \entry{readings2000envisat}{misc}{}{}
+    \name{author}{2}{}{%
+      {{hash=RC}{%
+         family={Readings},
+         familyi={R\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=HRA}{%
+         family={Harris},
+         familyi={H\bibinitperiod},
+         given={R.\bibnamedelima A.},
+         giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ESA Publications Division}%
+    }
+    \strng{namehash}{RCHRA1}
+    \strng{fullhash}{RCHRA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+  \field{howpublished}{\url{https://earth.esa.int/eogateway/documents/20142/37627/envisat-mipas-instrument-description.pdf}}
+    \field{note}{[Online; accessed 16/07/22]}
+    \field{title}{Envisat {MIPAS} an Instrument for Atmospheric Chemistry and
+  Climate Research}
+    \field{year}{2000}
+  \endentry
+
+  \entry{Ridolfi00}{article}{}{}
     \name{author}{12}{}{%
       {{hash=RM}{%
          family={Ridolfi},
@@ -1099,11 +1257,37 @@
   near-real-time dataprocessing}
     \field{volume}{39}
     \field{journaltitle}{Applied Optics}
-    \field{month}{03}
     \field{year}{2000}
   \endentry
 
-  \entry{rue2005gaussian}{book}{}
+  \entry{rodgers1976retrieval}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=RCD}{%
+         family={Rodgers},
+         familyi={R\bibinitperiod},
+         given={Clive\bibnamedelima D},
+         giveni={C\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{RCD1}
+    \strng{fullhash}{RCD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{number}{4}
+    \field{pages}{609\bibrangedash 624}
+    \field{title}{Retrieval of atmospheric temperature and composition from
+  remote measurements of thermal radiation}
+    \field{volume}{14}
+    \field{journaltitle}{Reviews of Geophysics}
+    \field{year}{1976}
+  \endentry
+
+  \entry{rue2005gaussian}{book}{}{}
     \name{author}{2}{}{%
       {{hash=RH}{%
          family={Rue},
@@ -1134,7 +1318,7 @@
     \field{year}{2005}
   \endentry
 
-  \entry{rybicki2000rte}{book}{}
+  \entry{rybicki2000rte}{book}{}{}
     \name{author}{2}{}{%
       {{hash=RGB}{%
          family={Rybicki},
@@ -1165,7 +1349,7 @@
     \field{year}{2004}
   \endentry
 
-  \entry{MLSdata}{misc}{}
+  \entry{MLSdata}{misc}{}{}
     \name{author}{4}{}{%
       {{hash=SM}{%
          family={Schwartz},
@@ -1208,7 +1392,7 @@
     \field{year}{2020}
   \endentry
 
-  \entry{vsimevckova2006einstein}{article}{}
+  \entry{vsimevckova2006einstein}{article}{}{}
     \name{author}{5}{}{%
       {{hash=SM}{%
          family={{\v{S}}ime{\v{c}}kov{\'a}},
@@ -1260,7 +1444,7 @@
     \field{year}{2006}
   \endentry
 
-  \entry{SIMPSON201216}{article}{}
+  \entry{SIMPSON201216}{article}{}{}
     \name{author}{3}{}{%
       {{hash=SD}{%
          family={Simpson},
@@ -1295,7 +1479,7 @@
     \field{year}{2012}
   \endentry
 
-  \entry{atmosphere1976us}{book}{}
+  \entry{atmosphere1976us}{book}{}{}
     \list{publisher}{2}{%
       {United States. National Oceanic}%
       {Atmospheric Administration, United States Committee on Extension to the
@@ -1311,7 +1495,7 @@
     \field{year}{1976}
   \endentry
 
-  \entry{wang2015graphs}{article}{}
+  \entry{wang2015graphs}{article}{}{}
     \name{author}{4}{}{%
       {{hash=WYX}{%
          family={Wang},
@@ -1352,7 +1536,7 @@
     \field{year}{2016}
   \endentry
 
-  \entry{waters2006earth}{article}{}
+  \entry{waters2006earth}{article}{}{}
     \true{moreauthor}
     \true{morelabelname}
     \name{author}{10}{}{%
@@ -1435,7 +1619,7 @@
     \field{year}{2006}
   \endentry
 
-  \entry{wolff2004monte}{article}{}
+  \entry{wolff2004monte}{article}{}{}
     \name{author}{1}{}{%
       {{hash=WU}{%
          family={Wolff},
@@ -1461,7 +1645,7 @@
     \field{year}{2004}
   \endentry
 
-  \entry{wolff2002LecNot}{misc}{}
+  \entry{wolff2002LecNot}{misc}{}{}
     \name{author}{5}{}{%
       {{hash=WU}{%
          family={Wolﬀ},
