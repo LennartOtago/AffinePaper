@@ -38,32 +38,32 @@
 \maketitle
 
 \section{Introduction}
-\textcolor{red}{Some satellites, which orbit around the earth at a height of around 500km above the ground, carry measurement devices to determine trace gas concentrations in the stratosphere.
+There are satellites, which orbit around the earth at a height of around 500km above the ground, carry measurement devices to determine trace gas concentrations in the stratosphere.
 More specifically, atmospheric limb-sounders are pointing through the atmosphere and detect thermal radiation of trace gases, e.g., ozone.
 Examples of such limb-sounders are the Microwave
 Limb Sounder (MLS) on NASA’s Aura mission~\cite{waters2006earth} and the
 Michelson Interferometer for Passive Atmospheric Sounding
-(MIPAS) on ESA’s Envisat~\cite{readings2000envisat}.}
+(MIPAS) on ESA’s Envisat~\cite{readings2000envisat}.
 
-\textcolor{red}{Measurements of such devices can be described by the radiative transfer equation (RTE), which in this case is a path integral along the satellite's pointing direction.
+Measurements of such devices can be described by the radiative transfer equation (RTE), which in this case is a path integral along the satellite's pointing direction.
 This path integral includes an absorption term accounting for the re-attenuation of the thermal radiation along the satellite's line of sight.
-That makes inferring the trace gas concentration from a set of measurements a non-linear inverse problem.}
+That makes inferring the trace gas concentration from a set of measurements a non-linear inverse problem.
 
-\textcolor{red}{Existing methods use regularisation methods to retrieve trace gas concentration from measurements~\cite{rodgers1976retrieval, livesey2006retrieval, raspollini2021level}.
-These methods do not include hyper-parameters, such as noise covariance, and produce biased results~\cite{Froidevaux2008snrozone}.}
+Existing methods use regularisation methods to retrieve trace gas concentration from measurements~\cite{rodgers1976retrieval, livesey2006retrieval, raspollini2021level}.
+These methods do not include hyper-parameters, such as noise covariance, and produce biased results~\cite{Froidevaux2008snrozone}.
 
-\textcolor{red}{Firstly, given some simulated data, we treat this non-linear problem as a linear problem by neglecting the absorption term in the RTE.
+Firstly, given some simulated data, we treat this non-linear problem as a linear problem by neglecting the absorption term in the RTE.
 A linear-Gaussian hierarchical Bayesian framework is employed to infer the ozone concentration in the stratosphere.
 This includes establishing a hierarchical structure and classifying hyper-parameters and parameters.
 For efficient inference we employ the marginal-and-then-conditional (MTC) scheme as in~\cite{fox2016fast}.
 This gives a low-dimensional marginal posterior probability distribution over the hyper-parameters and a high-dimensional conditional posterior probability for the ozone parameter.
 We show that evaluating the marginal posterior on a grid gives the conditional posterior mean at no additional cost.
-To quantify the conditional posterior variance, samples from the conditional posterior are drawn via the randomise-then-optimise (RTO) scheme~\cite{bardsley2012mcmc}.}
+To quantify the conditional posterior variance, samples from the conditional posterior are drawn via the randomise-then-optimise (RTO) scheme~\cite{bardsley2012mcmc}.
 
-\textcolor{red}{Using the results of the linearised problem, an affine map approximating the non-linear forward model is obtained.
-We employ the same hierarchical Bayesian framework as previously used, but with the approximated forward model, to quantify the unbiased mean and variance of the posterior ozone profile.}
+Using the results of the linearised problem, an affine map approximating the non-linear forward model is obtained.
+We employ the same hierarchical Bayesian framework as previously used, but with the approximated forward model, to quantify the unbiased mean and variance of the posterior ozone profile.
 
-\textcolor{red}{All programming and analysis in this paper are done in Python, and the reported computation times are taken on a MacBook Pro from 2019 with a 2.4 GHz quad-core Intel i5 processor.}
+All programming and analysis in this paper are done in Python, and the reported computation times are taken on a MacBook Pro from 2019 with a 2.4 GHz quad-core Intel i5 processor.
 
 \section{Hierarchical Bayesian Modelling}
 \label{sec:BayesIntro}
@@ -82,28 +82,28 @@ Within a Bayesian approach all unknown hyper-parameters and parameters are treat
 	\centering
 	\begin{tikzpicture}
 		
-				
+		every edge/.style = {draw, -latex, thick} % <---
 		\node[roundnode2] at (0,2) (del)    {$\delta$};
 		\node[roundnode2] at (-1.5,2) (gam)    {$\gamma$};
-		\node[align=center] at (0,2) (theta) {$\bm{\theta}$};
+		%\node[align=center] at (-0.75,2.25) (theta) {$\bm{\theta}$};
 		\node[roundnode2] at (0,0.5) (x)    {$\bm{x}$};
 		\node[roundnode2] at (0,-1.5) (u)    {$\bm{A}(\bm{x})$};
 		\node[rectnode] at (0,-3) (y)    {$\bm{y}$};
 		
-		\node[align=center] at (-3.25,0) (nt) {noise\\$\bm{\eta} \sim$}
+		%\node[align=center] at (-3.25,0) (nt) {noise\\$\bm{\eta} \sim$};
 		
-		\node[fit=(del)(gam),draw,thick,dotted,black, rounded corners] {};
-
 		\draw[->, very thick, mydotted] (x.south) -- (u.north); 
 		\draw[->, very thick] (u.south) -- (y.north); 
 		\draw[->, very thick] (del.south) -- (x.north); 
 		\draw[->, very thick] (gam) edge[bend right=20] (y);  
 		
-		\node[align=center] at (2.8,2.5) (tht) {$\sim \pi_{\bm{\theta}}(\cdot) $ hyper-parameters};
+		\node[align=center] at (3.5,2) (tht) {$\{\delta, \gamma\} = \bm{\theta}\sim \pi_{\bm{\theta}}(\cdot) $ hyper-parameters};
 		\node[align=center] at (2.4,0.5) (xt) {$\sim \pi_{\bm{x}}(\cdot|\bm{\theta}) $ parameters};
 		\node[align=center] at (2,-1.5) (ut) {noise-free data};
-		\node[align=center] at (2,-3.5) (yt) {$\sim \pi_{\bm{y}}(\cdot|\bm{x},\bm{\theta})$ data};
-		\node[align=center] at (-3.25,0) (nt) {noise\\$\bm{\eta} \sim \pi_{\bm{\eta}}(\cdot|\bm{\theta})$};
+		\node[align=center] at (2,-3) (yt) {$\sim \pi_{\bm{y}}(\cdot|\bm{x},\bm{\theta})$ data};
+		%\node[align=center] at (-3.25,0) (nt) {noise\\$\bm{\eta} \sim \pi_{\bm{\eta}}(\cdot|\bm{\theta})$};
+		%\node[fit=(s)(d),draw,dotted,black, rounded corners] {};
+		\node[fit=(del)(gam),draw,thick,dotted,black, rounded corners] {};
 	\end{tikzpicture}
 	\caption[Hierarchical Bayesian Model]{\textcolor{red}{A directed acyclic graph (DAG) for an inverse problem visualises statistical dependencies as solid line arrows and deterministic dependencies as dotted arrows.
 		The hyper-parameters $\bm{\theta}$ are distributed as ($\sim$) the hyper-prior distribution $\pi(\bm{\theta})$.
@@ -344,7 +344,7 @@ In the case of a Taylor series (of first order), one may approximate around the 
 The affine map (or the small change $\epsilon$) may be calculated with a linear solver or a least squares fit.}
 %(Further, since $\epsilon$ is small $\bm{M}$ is invertible.)}
 
-\section{Linear-Gaussian Hierarchical Bayesian Model}
+\section{Linear-Gaussian Hierarchical Model}
 \label{sec:BayModel}
 First this inverse problem is treated as a linear inverse problem by neglecting the absorption term in the RTE (see Eq.~\ref{eq:RTE}), so that the linear forward model matrix is defined as $\bm{A} \coloneqq \bm{M} \bm{A}_L$ with $\bm{M} = \bm{I}$.
 The reader is guided through the process of setting up a hierarchical Bayesian framework and establishing a choice of prior distributions.
@@ -357,25 +357,25 @@ We plot statistical dependencies as solid arrows and deterministic dependencies 
 	\begin{tikzpicture}
 		%box/.style = {draw, thick, minimum width=2.5cm, minimum height=1cm},
 		every edge/.style = {draw, -latex, thick} % <---
-		\node[roundnode2] at (-4,6.5) (Q)     {$\bm{Q}$};
-		\node[roundnode2] at (-2.5,5) (x)     {$\bm{x}$};
-		\node[align=center] at (-1,3.25) (A)    {$\bm{A}( \bm{x})$};
-		\node[rectnode] at (-1,1) (y)    {$\bm{y}$};
-		\node[roundnode2] at (-2.5,2.5) (e)    {$\bm{\eta}$};
-		\node[roundnode2] at (-6.5,6.5) (S)    {$\bm{\Sigma}$};
-		\node[roundnode2] at (-8,8) (s)    {$\gamma$};
-		\node[roundnode2] at (-5.5,8) (d)    {$\delta$};
+		\node[roundnode2] at (-2.5,5) (Q)     {$\bm{Q}$};
+		\node[roundnode2] at (-1.5,3.5) (x)     {$\bm{x}$};
+		\node[align=center] at (-1,2) (A)    {$\bm{A}( \bm{x})$};
+		\node[rectnode] at (-1,0.5) (y)    {$\bm{y}$};
+		%\node[roundnode2] at (-2.5,2.5) (e)    {$\bm{\eta}$};
+		\node[roundnode2] at (-4.25,5) (S)    {$\bm{\Sigma}$};
+		\node[roundnode2] at (-5.75,6.5) (s)    {$\gamma$};
+		\node[roundnode2] at (-3.5,6.5) (d)    {$\delta$};
 		
-		\node[roundnode2] at (-8,10) (shyp)    {$\bm{\theta}_{\gamma}$};
-		\node[roundnode2] at (-5.5,10) (dhyp)    {$\bm{\theta}_{\delta}$};
+%		\node[roundnode2] at (-8,10) (shyp)    {$\bm{\theta}_{\gamma}$};
+%		\node[roundnode2] at (-5.5,10) (dhyp)    {$\bm{\theta}_{\delta}$};
 		%Lines
-		\draw[->, very thick] (S) -- (e);
+		\draw[->, very thick] (S) -- (y);
 		\draw[->, mydotted, very thick] (s) -- (S);
-		\draw[->, mydotted, very thick] (e) -- (y);
-		\draw[->,very thick] (A) -- (y);
+		%\draw[->, mydotted, very thick] (e) -- (y);
+		\draw[->,mydotted,  very thick] (A) -- (y);
 		\draw[->, mydotted,  very thick] (x) -- (A);
-		\draw[->, very thick] (shyp) -- (s);
-		\draw[->, very thick] (dhyp) -- (d);
+%		\draw[->, very thick] (shyp) -- (s);
+%		\draw[->, very thick] (dhyp) -- (d);
 		
 		
 		\draw[->, mydotted, very thick] (d) -- (Q); 
@@ -388,7 +388,7 @@ We plot statistical dependencies as solid arrows and deterministic dependencies 
 		
 		%\node[align =center] at (-2.5,10) (T3) {hyper-prior distributions \\ $\pi( \delta, \gamma)$ };
 		
-		\node[fit=(s)(d),draw,dotted,black, rounded corners] {};
+		\node[fit=(s)(d),draw,thick,dotted,black, rounded corners] {};
 		\draw[->,dotted] (y) edge[bend right=85] (T1);  
 		\draw[->,dotted] (T1) -- (T2); 
 		
@@ -542,7 +542,7 @@ of $\pi(\bm{x}| \bm{y})$ can be computed as weighted expectations over the margi
 
 
 \section{Results}
-Given the simulated data the Problem is treated as a linear inverse Problem, neglecting the absorption in the RTE.
+Given the simulated data the problem is treated as a linear inverse problem, neglecting the absorption in the RTE.
 The marginal posterior is evaluated on a predefined grid, where the posterior mean is obtained at no additional computational cost.
 Samples from the conditional posterior are obtained via the RTO method.
 An affine map approximates the non-linear forward model from the linear forward model.
