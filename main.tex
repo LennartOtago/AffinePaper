@@ -142,7 +142,8 @@ Usually, the objective is to calculate the expectation of a function $h(\bm{x})$
 Characterising the posterior distribution or quickly generating a representative sample set from the posterior distribution often presents a significant challenge. 
 This is mainly due to the strong correlations that usually exist between the parameters $\bm{x}$ and hyper-parameters $\bm{\theta}$, as discussed by Rue and Held in~\cite{rue2005gaussian}.
 
-Depending on the problem and the available model, it is beneficial to factorise the joint posterior distribution
+%Depending on the problem and the available model,
+For models where the full conditional over the latent field has a known form, it is beneficial to factorise the joint posterior distribution
 \begin{align}
 	\pi(\bm{x}, \bm{\theta} |  \bm{y}) = \pi(\bm{x} |  \bm{\theta}, \bm{y}) \, \pi(\bm{\theta} |   \bm{y}) \label{eq:MTC}
 \end{align}
@@ -160,7 +161,7 @@ Applying the law of total expectation~\cite{champ2022generalizedlawtotalcovarian
 	\label{eq:fullCond}
 \end{align}
 
-In the case of a linear-Gaussian hierarchical Bayesian model, both the marginal distribution $\pi (\bm{\theta}| \bm{y})$ 
+In the case of a linear-Gaussian hierarchical Bayesian model, as in \cite{fox2016fast}, both the marginal distribution $\pi (\bm{\theta}| \bm{y})$ 
 and the inner expectation $\mathbb{E}_{\bm{x} |  \bm{\theta}, \bm{y}} \left[ h(\bm{x}) \right]$ are well defined (see Sec.~\ref{sec:BayModel} and \cite{fox2016fast}).
 If the integral in Eq.~\ref{eq:2fullCond} is expensive to calculate sample-based methods may be used to calculate the expectations in 
 Eq.~\eqref{eq:2fullCond}.
@@ -357,14 +358,14 @@ We plot statistical dependencies as solid arrows and deterministic dependencies 
 	\begin{tikzpicture}
 		%box/.style = {draw, thick, minimum width=2.5cm, minimum height=1cm},
 		every edge/.style = {draw, -latex, thick} % <---
-		\node[roundnode2] at (-2.5,5) (Q)     {$\bm{Q}$};
-		\node[roundnode2] at (-1.5,3.5) (x)     {$\bm{x}$};
-		\node[align=center] at (-1,2) (A)    {$\bm{A}( \bm{x})$};
-		\node[rectnode] at (-1,0.5) (y)    {$\bm{y}$};
+		\node[roundnode2] at (-2.25,4.75) (Q)     {$\bm{Q}$};
+		\node[roundnode2] at (-1,3.5) (x)     {$\bm{x}$};
+		\node[roundnode2] at (-1,1.75) (A)    {$\bm{A}( \bm{x})$};
+		\node[rectnode] at (-1,0) (y)    {$\bm{y}$};
 		%\node[roundnode2] at (-2.5,2.5) (e)    {$\bm{\eta}$};
-		\node[roundnode2] at (-4.25,5) (S)    {$\bm{\Sigma}$};
-		\node[roundnode2] at (-5.75,6.5) (s)    {$\gamma$};
-		\node[roundnode2] at (-3.5,6.5) (d)    {$\delta$};
+		\node[roundnode2] at (-4.5,4.75) (S)    {$\bm{\Sigma}$};
+		\node[roundnode2] at (-5.5,6) (s)    {$\gamma$};
+		\node[roundnode2] at (-3.5,6) (d)    {$\delta$};
 		
 %		\node[roundnode2] at (-8,10) (shyp)    {$\bm{\theta}_{\gamma}$};
 %		\node[roundnode2] at (-5.5,10) (dhyp)    {$\bm{\theta}_{\delta}$};
@@ -553,7 +554,7 @@ Recall that $\bm{x} \in \mathbb{R}^n$ with $n = 34$ and $\bm{y} \in \mathbb{R}^m
 \begin{figure}[ht!]
 	\centering
     \includegraphics[]{AffinePapData.png}
-	\caption[]{Non-linear noise-free data and non-linear noisy data at different tangent heights.}
+	\caption[]{Non-linear noise-free data and non-linear noisy data at different tangent heights. Negative noisy data values are not shown due to logarithmic scaling.}
 	\label{fig:Data}
 \end{figure} 
 \clearpage
@@ -732,18 +733,30 @@ Here we find an affine map $\bm{M}$ that provides a mapping from the linear forw
 	\centering
 	\begin{tikzpicture}
 				\node[roundnode2] at (-1,5) (x)     {$\bm{x}$};
-		\node[align=center] at (-1,3) (A)    {$\bm{A} (\bm{x})$};
-			\node[align=center] at (1,3) (Aff)    {$\bm{M}\bm{A}_L\bm{x}$};
-		\node[rectnode] at (-1,1) (y)    {$\bm{y}$};
+		\node[roundnode2] at (-1,3) (A)    {$\bm{A} (\bm{x})$};
 
-		\node[roundnode2] at (-2.5,2.5) (e)    {$\bm{\eta}$};
-		\draw[->, mydotted, very thick] (e) -- (y);
-		\draw[->, very thick] (A) -- (y);
+		\node[rectnode] at (-1,0.5) (y)    {$\bm{y}$};
+
+		\node[roundnode2] at (-3.25,5) (e)    {$\bm{\Sigma}$};
+		\draw[->, very thick] (e) -- (y);
+		\draw[->, mydotted,  very thick] (A) -- (y);
 		\draw[->, mydotted,  very thick] (x) -- (A);
 
-		\draw[->,  mydotted, very thick] (x) edge[bend left=45] (Aff);  
+		
+		\node[roundnode2] at (4,5) (x)     {$\bm{x}$};
 
-		\draw[->, very thick] (Aff) edge[bend left=45] (y);  
+		\node[roundnode2] at (5,4) (AL)    {$\bm{A}_L\bm{x}$};
+		\node[roundnode2] at (5,2) (Aff)    {$\bm{M}\bm{A}_L\bm{x}$};
+		\node[rectnode] at (4,0.5) (y)    {$\bm{y}$};
+		
+		\node[roundnode2] at (1.75,5) (e)    {$\bm{\Sigma}$};
+		\draw[->, very thick] (e) -- (y);
+
+
+		
+		\draw[->,  mydotted, very thick] (x) edge[bend left=40] (AL);  
+		\draw[->,  mydotted, very thick] (AL) -- (Aff);  
+		\draw[->, mydotted,very thick] (Aff) edge[bend left=40] (y);  
 		
 	\end{tikzpicture}
 	\caption[]{Schematic of how the affine map  and the linear forward model approximates the non-linear forward model.}
