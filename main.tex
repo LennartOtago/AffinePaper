@@ -518,7 +518,7 @@ is a Gamma distribution.
 
 \subsubsection{Full Conditional Posterior}
 \label{subsec:firstCond}
-As in \cite{SIMPSON201216}, consider the joint Gaussian distribution
+As in~\cite{SIMPSON201216}, consider the joint Gaussian distribution
 \begin{align}
 	\begin{pmatrix}
 		\bm{x} \\
@@ -683,7 +683,7 @@ More explicitly, conditioned on an independent $\lambda^{(k)},\gamma^{(k)} \sim 
 with $\tilde{\bm{v}}_1 \sim \mathcal{N}(\bm{0},  \bm{I})$, $\tilde{\bm{v}}_2 \sim \mathcal{N}(\bm{0}, \bm{I} )$ and $\bm{L}^{1/2}$ is the Cholesky decomposition of $\bm{L}$ \cite{bardsley2012mcmc}.
 Note that $\bm{v}_1 \in \mathbb{R}^m$ and $\bm{v}_2 \in \mathbb{R}^n$.
 The Cholesky factorisation of $\bm{B}^{(k)}$ and $\bm{L}$ is obtained via the Python function \texttt{numpy.linalg.cholesky} and \texttt{scipy.linalg.cho\_solve} is used to solve for $\bm{x}^{(k)}$.
-We draw $n-1 = 29$ posterior samples in $\approx 0.003$.
+We draw $m-1 = 29$ posterior samples in $\approx 0.003$.
 The full conditional posterior samples are plotted in Fig.~\ref{fig:OzonSampl} with negative ozone values set to zero.
 The fact that we have to deal with negative ozone values is due to the poor prior choice in $\pi(\bm{x}|\delta)$.
 Those full conditional ozone samples are used to find an affine map.
