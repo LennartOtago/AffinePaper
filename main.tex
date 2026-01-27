@@ -36,6 +36,13 @@
 \begin{document}
 
 \maketitle
+\begin{abstract}
+The radiative transfer equation (RTE) for a stratospheric limb-sounder measuring thermal radiation of ozone presents a weakly non-linear forward map.
+Given some simulated data, this paper presents a hierarchical Bayesian framework to infer ozone concentrations as well as some hyper-parameters, such as the noise covariance and the ozone smoothness.
+Thereby, the non-linear forward model is approximated with an affine map and the linearised RTE, which in combination with the marginal-then-conditional (MTC) scheme~\cite{fox2016fast} enables efficient inference.
+
+
+\end{abstract}
 
 \section{Introduction}
 There are satellites, which orbit around the earth at a height of around 500km above the ground, carry measurement devices to determine trace gas concentrations in the stratosphere.
@@ -55,7 +62,7 @@ These methods do not include hyper-parameters, such as noise covariance, and pro
 Firstly, given some simulated data, we treat this non-linear problem as a linear problem by neglecting the absorption term in the RTE.
 A linear-Gaussian hierarchical Bayesian framework is employed to infer the ozone concentration in the stratosphere.
 This includes establishing a hierarchical structure and classifying hyper-parameters and parameters.
-For efficient inference we employ the marginal-and-then-conditional (MTC) scheme as in~\cite{fox2016fast}.
+For efficient inference we employ the marginal-then-conditional (MTC) scheme as in~\cite{fox2016fast}.
 This gives a low-dimensional marginal posterior probability distribution over the hyper-parameters and a high-dimensional conditional posterior probability for the ozone parameter.
 We show that evaluating the marginal posterior on a grid gives the conditional posterior mean at no additional cost.
 To quantify the conditional posterior variance, samples from the conditional posterior are drawn via the randomise-then-optimise (RTO) scheme~\cite{bardsley2012mcmc}.
@@ -148,7 +155,7 @@ For models where the full conditional over the latent field has a known form, it
 	\pi(\bm{x}, \bm{\theta} |  \bm{y}) = \pi(\bm{x} |  \bm{\theta}, \bm{y}) \, \pi(\bm{\theta} |   \bm{y}) \label{eq:MTC}
 \end{align}
 into the full conditional posterior $\pi(\bm{x} |  \bm{\theta}, \bm{y})$ over the latent field $\bm{x}$ and the marginal posterior $ \pi(\bm{\theta} |   \bm{y})$ over hyper-parameter $\bm{\theta}$.
-This approach, known as the marginal-and-then-conditional (MTC) method~\cite{fox2016fast}, is particularly advantageous when $\bm{x}\in \mathbb{R}^n$ is high-dimensional, while $\bm{\theta}$ is low-dimensional and the evaluation of the marginal posterior
+This approach, known as the marginal-then-conditional (MTC) method~\cite{fox2016fast}, is particularly advantageous when $\bm{x}\in \mathbb{R}^n$ is high-dimensional, while $\bm{\theta}$ is low-dimensional and the evaluation of the marginal posterior
 \begin{align}
 	\pi(\bm{\theta} |   \bm{y}) =  \frac{ \pi(   \bm{y} | \bm{x},\bm{\theta})  \pi( \bm{x} | \bm{\theta} )  \pi(\bm{\theta}) }{ \pi(\bm{x} | \bm{\theta} ,   \bm{y})   \pi( \bm{y})} \propto \frac{ \pi(   \bm{y} | \bm{x},\bm{\theta})  \pi( \bm{x} | \bm{\theta} )  \pi(\bm{\theta}) }{ \pi(\bm{x} | \bm{\theta} ,   \bm{y}) } \label{eq:margGen}\, 
 \end{align}
@@ -168,7 +175,7 @@ Eq.~\eqref{eq:2fullCond}.
 To produce samples $\{ (\bm{x}, \bm{\theta})^{(1)}, \dots, (\bm{x}, \bm{\theta})^{(k)}, \dots, (\bm{x}, \bm{\theta})^{(N)} \} \sim \pi(\bm{x}, \bm{\theta} |  \bm{y}) $ one needs an independent sample from $\bm{\theta}^{(k)} \sim \pi(\bm{\theta} |  \bm{y})$ first and then draws a sample from the full conditional posterior $\bm{x}^{(k)} \sim \pi(\bm{x} | \bm{\theta}^{(k)}  , \bm{y})$.
 
 \textcolor{red}{
-Note that for the affine case, where e.g., the forward model is given by $\bm{A}\bm{x} + \bm{b}$, the MTC method as in \cite{fox2016fast} is still applicable.
+Note that for the affine case, where e.g., the forward model is given by $\bm{A}\bm{x} + \bm{b}$, the MTC method as in~\cite{fox2016fast} is still applicable.
 For Gaussian noise and a Gaussian prior, the form of the posterior of the affine case does not change compared to the linear-Gaussian case, where the forward model may be given by $\bm{A}\bm{x}$.}
 \section{The Forward Model}
 \label{ch:formodel}
